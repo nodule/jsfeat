@@ -1,5 +1,5 @@
-on.input.descriptors  = function() {
-  jsfeat.orb.describe($.src, $.corners, $.count, $.descriptors)
+on.input.dest = function() {
+  jsfeat.imgproc.resample($.src, $.dest, $.width, $.height)
   
-  output( { out: $.write('descriptors', $.descriptors) } );
+  output( { out: $.write('dest', $.dest) } );
 };

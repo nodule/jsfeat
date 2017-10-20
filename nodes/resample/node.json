@@ -1,10 +1,10 @@
 {
-  "name": "orbDescribe",
+  "name": "resample",
   "ns": "jsfeat",
   "async": true,
-  "description": "ORB Describe",
+  "description": "Resample",
   "phrases": {
-    "active": "Describing ORB"
+    "active": "Resampling"
   },
   "ports": {
     "input": {
@@ -12,23 +12,23 @@
         "title": "Source",
         "type": "any"
       },
-      "corners": {
+      "dest": {
         "title": "Destination",
-        "type": "any"
-      },
-      "count": {
-        "title": "Count",
-        "type": "number"
-      },
-      "descriptors": {
-        "title": "Descriptors",
         "type": "any",
         "async": true
+      },
+      "width": {
+        "title": "width",
+        "type": "number"
+      },
+      "height": {
+        "title": "Height",
+        "type": "number"
       }
     },
     "output": {
       "out": {
-        "title": "Descriptors",
+        "title": "Out",
         "type": "any"
       }
     }

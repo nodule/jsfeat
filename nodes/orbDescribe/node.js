@@ -1,8 +1,5 @@
-on.input.in = function() {
-  var res = jsfeat..()
-  if($.in.length > 0) {
-    output( { yes: $.get('in') } );
-  } else {
-    output( { no: $.get('in') } );
-  }
+on.input.descriptors  = function() {
+  jsfeat.orb.describe($.src, $.corners, $.count, $.descriptors)
+  
+  output( { out: $.write('descriptors', $.descriptors) } );
 };

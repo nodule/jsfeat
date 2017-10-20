@@ -1,0 +1,227 @@
+{
+  "name": "http",
+  "description": "Jsfeat nodes for Chiχ",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/jsfeat.git"
+  },
+  "dependencies": {
+    "jsfeat": "0.0.8"
+  },
+  "nodes": [
+    {
+      "dependencies": {
+        "npm": {
+          "jsfeat": "latest"
+        }
+      },
+      "ports": {
+        "input": {
+          "src": {
+            "title": "Source",
+            "type": "any"
+          },
+          "dest": {
+            "title": "Destination",
+            "async": true,
+            "type": "any"
+          },
+          "kernel_size": {
+            "title": "Kernel Size",
+            "type": "number"
+          },
+          "sigma": {
+            "title": "Sigma",
+            "type": "number"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Out",
+            "type": "any"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Applying gaussian blur"
+      },
+      "description": "Gaussian blur",
+      "async": true,
+      "ns": "jsfeat",
+      "name": "gaussian_blur",
+      "fn": "on.input.dest = function() {\n  jsfeat.gaussian_blur($.src, $.dest, $.kernel_size, $.sigma)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n"
+    },
+    {
+      "dependencies": {
+        "npm": {
+          "jsfeat": "latest"
+        }
+      },
+      "ports": {
+        "input": {
+          "src": {
+            "title": "Source",
+            "type": "any"
+          },
+          "dest": {
+            "title": "Destination",
+            "async": true,
+            "type": "any"
+          },
+          "width": {
+            "title": "Width",
+            "type": "number"
+          },
+          "height": {
+            "title": "Height",
+            "type": "number"
+          },
+          "code": {
+            "title": "Code",
+            "type": "number"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Out",
+            "type": "any"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Applying grayscale"
+      },
+      "description": "Grayscale",
+      "async": true,
+      "ns": "jsfeat",
+      "name": "grayscale",
+      "fn": "on.input.dest  = function() {\n  jsfeat.grayscale($.src, $.width, $.height, $.dest, $.code)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n\n"
+    },
+    {
+      "dependencies": {
+        "npm": {
+          "jsfeat": "latest"
+        }
+      },
+      "ports": {
+        "input": {
+          "src": {
+            "title": "Source",
+            "type": "any"
+          },
+          "corners": {
+            "title": "Destination",
+            "type": "any"
+          },
+          "count": {
+            "title": "Count",
+            "type": "number"
+          },
+          "descriptors": {
+            "title": "Descriptors",
+            "type": "any",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Descriptors",
+            "type": "any"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Describing ORB"
+      },
+      "description": "ORB Describe",
+      "async": true,
+      "ns": "jsfeat",
+      "name": "orbDescribe",
+      "fn": "on.input.descriptors  = function() {\n  jsfeat.orb.describe($.src, $.corners, $.count, $.descriptors)\n  \n  output( { out: $.write('descriptors', $.descriptors) } );\n};\n"
+    },
+    {
+      "dependencies": {
+        "npm": {
+          "jsfeat": "latest"
+        }
+      },
+      "ports": {
+        "input": {
+          "src": {
+            "title": "Source",
+            "type": "any"
+          },
+          "corners": {
+            "title": "Destination",
+            "type": "any"
+          },
+          "sx": {
+            "title": "Sx",
+            "type": "number"
+          },
+          "sy": {
+            "title": "Sy",
+            "type": "number"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Dest",
+            "type": "any"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Pyrdown"
+      },
+      "description": "Pyrdown",
+      "async": true,
+      "ns": "jsfeat",
+      "name": "pyrdown",
+      "fn": "on.input.dest = function() {\n  jsfeat.imgproc.pyrdown($.src, $.dest, $.sx, $.sy)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n"
+    },
+    {
+      "dependencies": {
+        "npm": {
+          "jsfeat": "latest"
+        }
+      },
+      "ports": {
+        "input": {
+          "src": {
+            "title": "Source",
+            "type": "any"
+          },
+          "dest": {
+            "title": "Destination",
+            "type": "any",
+            "async": true
+          },
+          "width": {
+            "title": "width",
+            "type": "number"
+          },
+          "height": {
+            "title": "Height",
+            "type": "number"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Out",
+            "type": "any"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Resampling"
+      },
+      "description": "Resample",
+      "async": true,
+      "ns": "jsfeat",
+      "name": "resample",
+      "fn": "on.input.dest = function() {\n  jsfeat.imgproc.resample($.src, $.dest, $.width, $.height)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n"
+    }
+  ]
+}
