@@ -50,7 +50,7 @@
       "async": true,
       "ns": "jsfeat",
       "name": "gaussian_blur",
-      "fn": "on.input.dest = function() {\n  jsfeat.gaussian_blur($.src, $.dest, $.kernel_size, $.sigma)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n"
+      "fn": "on.input.dest = function() {\n  jsfeat.imgproc.gaussian_blur($.src, $.dest, $.kernel_size, $.sigma)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n"
     },
     {
       "dependencies": {
@@ -96,7 +96,7 @@
       "async": true,
       "ns": "jsfeat",
       "name": "grayscale",
-      "fn": "on.input.dest  = function() {\n  jsfeat.grayscale($.src, $.width, $.height, $.dest, $.code)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n\n"
+      "fn": "on.input.dest  = function() {\n  jsfeat.imgproc.grayscale($.src, $.width, $.height, $.dest, $.code)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n\n"
     },
     {
       "dependencies": {

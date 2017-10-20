@@ -18,7 +18,7 @@ module.exports = {
         type: "any",
         fn: function __DEST__(data, source, state, input, $, output, jsfeat) {
           var r = function() {
-            jsfeat.gaussian_blur($.src, $.dest, $.kernel_size, $.sigma)
+            jsfeat.imgproc.gaussian_blur($.src, $.dest, $.kernel_size, $.sigma)
 
             output({
               out: $.write('dest', $.dest)

@@ -18,7 +18,7 @@ module.exports = {
         type: "any",
         fn: function __DEST__(data, source, state, input, $, output, jsfeat) {
           var r = function() {
-            jsfeat.grayscale($.src, $.width, $.height, $.dest, $.code)
+            jsfeat.imgproc.grayscale($.src, $.width, $.height, $.dest, $.code)
 
             output({
               out: $.write('dest', $.dest)
