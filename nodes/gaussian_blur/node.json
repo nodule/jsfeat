@@ -1,0 +1,41 @@
+{
+  "name": "gaussian_blur",
+  "ns": "jsfeat",
+  "async": true,
+  "description": "Gaussian blur",
+  "phrases": {
+    "active": "Applying gaussian blur"
+  },
+  "ports": {
+    "input": {
+      "src": {
+        "title": "Source",
+        "type": "any"
+      },
+      "dest": {
+        "title": "Destination",
+        "async": true,
+        "type": "any"
+      },
+      "kernel_size": {
+        "title": "Kernel Size",
+        "type": "number"
+      },
+      "sigma": {
+        "title": "Sigma",
+        "type": "number"
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Out",
+        "type": "any"
+      }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "jsfeat": "latest"
+    }
+  }
+}

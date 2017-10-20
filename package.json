@@ -1,0 +1,27 @@
+{
+  "name": "chix-jsfeat",
+  "description": "Jsfeat nodes for Chiχ",
+  "author": "Rob Halff <rob.halff@gmail.com>",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/jsfeat.git"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "dependencies": {
+    "jsfeat": "0.0.8"
+  },
+  "devDependencies": {
+    "chit": "0.x.x"
+  },
+  "scripts": {
+    "test": "chit"
+  },
+  "chix": {
+    "name": "http",
+    "color": "rgb(71,162,170)"
+  }
+}

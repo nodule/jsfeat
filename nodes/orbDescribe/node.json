@@ -1,0 +1,24 @@
+{
+  "name": "",
+  "ns": "jsfeat",
+  "async": true,
+  "description": "",
+  "phrases": {
+    "active": "Processing"
+  },
+  "ports": {
+    "input": {
+      "in": {
+        "title": "In",
+        "type": "any",
+        "async": true
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Out",
+        "type": "any"
+      }
+    }
+  }
+}

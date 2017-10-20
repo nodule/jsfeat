@@ -1,0 +1,41 @@
+{
+  "name": "orbDescribe",
+  "ns": "jsfeat",
+  "async": true,
+  "description": "ORB Describe",
+  "phrases": {
+    "active": "Describing ORB"
+  },
+  "ports": {
+    "input": {
+      "src": {
+        "title": "Source",
+        "type": "any"
+      },
+      "corners": {
+        "title": "Destination",
+        "type": "any"
+      },
+      "count": {
+        "title": "Count",
+        "type": "number"
+      },
+      "descriptors": {
+        "title": "Descriptors",
+        "type": "any",
+        "async": true
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Descriptors",
+        "type": "any"
+      }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "jsfeat": "latest"
+    }
+  }
+}
