@@ -15,7 +15,7 @@
     "jsfeat": "0.0.8"
   },
   "devDependencies": {
-    "chit": "0.x.x"
+    "chit": "github:psichi/chit"
   },
   "scripts": {
     "test": "chit"

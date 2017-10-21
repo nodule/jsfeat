@@ -296,5 +296,6 @@
       "name": "resample",
       "fn": "on.input.dest = function() {\n  jsfeat.imgproc.resample($.src, $.dest, $.width, $.height)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n"
     }
-  ]
+  ],
+  "twigs": []
 }
