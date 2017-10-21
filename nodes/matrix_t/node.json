@@ -1,0 +1,30 @@
+{
+  "name": "matrix_t",
+  "ns": "jsfeat",
+  "description": "Matrix Type",
+  "phrases": {
+    "active": "Creating matrix"
+  },
+  "ports": {
+    "input": {
+      "cols": {
+        "title": "Cols",
+        "type": "array"
+      },
+      "rows": {
+        "title": "Rows",
+        "type": "array"
+      },
+      "type": {
+        "title": "Type",
+        "type": "string"
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Matrix",
+        "type": "matrix_t"
+      }
+    }
+  }
+}

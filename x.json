@@ -99,6 +99,37 @@
       "fn": "on.input.dest  = function() {\n  jsfeat.imgproc.grayscale($.src, $.width, $.height, $.dest, $.code)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n\n"
     },
     {
+      "ports": {
+        "input": {
+          "cols": {
+            "title": "Cols",
+            "type": "array"
+          },
+          "rows": {
+            "title": "Rows",
+            "type": "array"
+          },
+          "type": {
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Matrix",
+            "type": "matrix_t"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Creating matrix"
+      },
+      "description": "Matrix Type",
+      "ns": "jsfeat",
+      "name": "matrix_t",
+      "fn": "output = function() {\n  var type;\n  \n  switch($.type) {\n    case \"jsfeat.U8_t | jsfeat.C1_t\":\n     type = jsfeat.U8_t | jsfeat.C1_t;\n      break;\n    case \"jsfeat.F32C1_\":\n      type = jsfeat.F32C1_t;\n      break;\n    case \"jsfeat.U8C1_t\":\n      type =  jsfeat.U8C1_t;\n      break;\n    default:\n      throw Error('Unknown type: ' + $.type)\n      break;\n  }\n  \n  var out = new jsfeat.matrix_t($.cols, $.rows, type)\n  \n  output( { out: $.create(out) } );\n  \n  done();\n};\n"
+    },
+    {
       "dependencies": {
         "npm": {
           "jsfeat": "latest"
