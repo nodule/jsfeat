@@ -1,0 +1,41 @@
+{
+  "name": "keypoint_t",
+  "ns": "jsfeat",
+  "description": "Keypoint Type",
+  "phrases": {
+    "active": "Creating keypoint"
+  },
+  "ports": {
+    "input": {
+      "x": {
+        "title": "X",
+        "type": "number"
+      },
+      "y": {
+        "title": "Y",
+        "type": "number"
+      },
+      "score": {
+        "title": "Score",
+        "type": "number",
+        "default": 0
+      },
+      "level": {
+        "title": "Level",
+        "type": "number",
+        "default": 0
+      },
+      "angle": {
+        "title": "Angle",
+        "type": "number",
+        "default": -1.0
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Keypoint",
+        "type": "keypoint_t"
+      }
+    }
+  }
+}

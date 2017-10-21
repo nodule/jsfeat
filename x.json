@@ -101,6 +101,48 @@
     {
       "ports": {
         "input": {
+          "x": {
+            "title": "X",
+            "type": "number"
+          },
+          "y": {
+            "title": "Y",
+            "type": "number"
+          },
+          "score": {
+            "title": "Score",
+            "type": "number",
+            "default": 0
+          },
+          "level": {
+            "title": "Level",
+            "type": "number",
+            "default": 0
+          },
+          "angle": {
+            "title": "Angle",
+            "type": "number",
+            "default": -1
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Keypoint",
+            "type": "keypoint_t"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Creating keypoint"
+      },
+      "description": "Keypoint Type",
+      "ns": "jsfeat",
+      "name": "keypoint_t",
+      "fn": "output = function() {\n  var out = new jsfeat.keypoint_t($.x, $.y, $.score, $.level, $.angle)\n  \n  output( { out: $.create(out) } );\n  \n  done();\n};\n"
+    },
+    {
+      "ports": {
+        "input": {
           "cols": {
             "title": "Cols",
             "type": "array"
