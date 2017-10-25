@@ -9,11 +9,11 @@ module.exports = {
     input: {
       cols: {
         title: "Cols",
-        type: "array"
+        type: "number"
       },
       rows: {
         title: "Rows",
-        type: "array"
+        type: "number"
       },
       type: {
         title: "Type",
