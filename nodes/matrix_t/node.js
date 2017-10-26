@@ -18,7 +18,7 @@ output = function() {
   
   var out = new jsfeat.matrix_t($.cols, $.rows, type)
   
-  output( { out: $.create(out) } );
+  cb( { out: $.create(out) } );
   
   done();
 };

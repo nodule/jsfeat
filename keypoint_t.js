@@ -38,7 +38,12 @@ module.exports = {
       }
     }
   },
-  fn: function keypointT(input, $, output, state, done, cb, on) {
+  dependencies: {
+    npm: {
+      jsfeat: require('jsfeat')
+    }
+  },
+  fn: function keypointT(input, $, output, state, done, cb, on, jsfeat) {
     var r = function() {
       var out = new jsfeat.keypoint_t($.x, $.y, $.score, $.level, $.angle)
 
