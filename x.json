@@ -99,6 +99,11 @@
       "fn": "on.input.dest  = function() {\n  jsfeat.imgproc.grayscale($.src, $.width, $.height, $.dest, $.code)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "jsfeat": "latest"
+        }
+      },
       "ports": {
         "input": {
           "x": {
