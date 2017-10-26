@@ -40,7 +40,8 @@ module.exports = {
       },
       code: {
         title: "Code",
-        type: "number"
+        type: "number",
+        required: false
       }
     },
     output: {
