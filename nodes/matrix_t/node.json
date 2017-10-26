@@ -17,7 +17,8 @@
       },
       "type": {
         "title": "Type",
-        "type": "string"
+        "type": "string",
+        "enum": ["U8_t | C1_t", "F32C1_t", "U8C1_t"]
       }
     },
     "output": {
@@ -25,6 +26,11 @@
         "title": "Matrix",
         "type": "matrix_t"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "jsfeat": "latest"
     }
   }
 }

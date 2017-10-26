@@ -37,5 +37,10 @@
         "type": "keypoint_t"
       }
     }
+  },
+  "dependencies": {
+    "npm": {
+      "jsfeat": "latest"
+    }
   }
 }

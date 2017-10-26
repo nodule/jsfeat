@@ -17,7 +17,11 @@ module.exports = {
       },
       type: {
         title: "Type",
-        type: "string"
+        type: "string",
+        "enum": ["U8_t | C1_t",
+          "F32C1_t",
+          "U8C1_t"
+        ]
       }
     },
     output: {
@@ -27,18 +31,23 @@ module.exports = {
       }
     }
   },
-  fn: function matrixT(input, $, output, state, done, cb, on) {
+  dependencies: {
+    npm: {
+      jsfeat: require('jsfeat')
+    }
+  },
+  fn: function matrixT(input, $, output, state, done, cb, on, jsfeat) {
     var r = function() {
       var type;
 
       switch ($.type) {
-        case "jsfeat.U8_t | jsfeat.C1_t":
+        case "U8_t | C1_t":
           type = jsfeat.U8_t | jsfeat.C1_t;
           break;
-        case "jsfeat.F32C1_":
+        case "F32C1_":
           type = jsfeat.F32C1_t;
           break;
-        case "jsfeat.U8C1_t":
+        case "U8C1_t":
           type = jsfeat.U8C1_t;
           break;
         default:
