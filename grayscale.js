@@ -10,12 +10,12 @@ module.exports = {
     input: {
       src: {
         title: "Source",
-        type: "any"
+        type: "function"
       },
       dest: {
         title: "Destination",
         async: true,
-        type: "any",
+        type: "function",
         fn: function __DEST__(data, source, state, input, $, output, jsfeat) {
           var r = function() {
             jsfeat.imgproc.grayscale($.src, $.width, $.height, $.dest, $.code)
@@ -47,7 +47,7 @@ module.exports = {
     output: {
       out: {
         title: "Out",
-        type: "any"
+        type: "function"
       }
     }
   },

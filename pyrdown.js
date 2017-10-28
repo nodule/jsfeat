@@ -10,11 +10,11 @@ module.exports = {
     input: {
       src: {
         title: "Source",
-        type: "any"
+        type: "function"
       },
       corners: {
         title: "Destination",
-        type: "any"
+        type: "function"
       },
       sx: {
         title: "Sx",
@@ -28,7 +28,7 @@ module.exports = {
     output: {
       out: {
         title: "Dest",
-        type: "any"
+        type: "function"
       }
     }
   },

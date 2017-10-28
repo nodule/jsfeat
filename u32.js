@@ -13,7 +13,7 @@ module.exports = {
       },
       img_u8: {
         title: "Img U8",
-        type: "any"
+        type: "function"
       }
     },
     output: {
@@ -23,7 +23,7 @@ module.exports = {
       },
       img_u8: {
         title: "Img U8",
-        type: "any"
+        type: "function"
       }
     }
   },

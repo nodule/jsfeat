@@ -10,11 +10,11 @@
     "input": {
       "src": {
         "title": "Source",
-        "type": "any"
+        "type": "function"
       },
       "dest": {
         "title": "Destination",
-        "type": "any",
+        "type": "function",
         "async": true
       },
       "width": {
@@ -29,7 +29,7 @@
     "output": {
       "out": {
         "title": "Out",
-        "type": "any"
+        "type": "function"
       }
     }
   },

@@ -10,11 +10,11 @@ module.exports = {
     input: {
       src: {
         title: "Source",
-        type: "any"
+        type: "function"
       },
       corners: {
         title: "Destination",
-        type: "any"
+        type: "function"
       },
       count: {
         title: "Count",
@@ -22,7 +22,7 @@ module.exports = {
       },
       descriptors: {
         title: "Descriptors",
-        type: "any",
+        type: "function",
         async: true,
         fn: function __DESCRIPTORS__(data, source, state, input, $, output, jsfeat) {
           var r = function() {
@@ -42,7 +42,7 @@ module.exports = {
     output: {
       out: {
         title: "Descriptors",
-        type: "any"
+        type: "function"
       }
     }
   },

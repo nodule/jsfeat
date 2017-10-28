@@ -10,12 +10,12 @@
     "input": {
       "src": {
         "title": "Source",
-        "type": "any"
+        "type": "function"
       },
       "dest": {
         "title": "Destination",
         "async": true,
-        "type": "any"
+        "type": "function"
       },
       "kernel_size": {
         "title": "Kernel Size",
@@ -31,7 +31,7 @@
     "output": {
       "out": {
         "title": "Out",
-        "type": "any"
+        "type": "function"
       }
     }
   },

@@ -20,12 +20,12 @@
         "input": {
           "src": {
             "title": "Source",
-            "type": "any"
+            "type": "function"
           },
           "dest": {
             "title": "Destination",
             "async": true,
-            "type": "any"
+            "type": "function"
           },
           "kernel_size": {
             "title": "Kernel Size",
@@ -41,7 +41,7 @@
         "output": {
           "out": {
             "title": "Out",
-            "type": "any"
+            "type": "function"
           }
         }
       },
@@ -64,12 +64,12 @@
         "input": {
           "src": {
             "title": "Source",
-            "type": "any"
+            "type": "function"
           },
           "dest": {
             "title": "Destination",
             "async": true,
-            "type": "any"
+            "type": "function"
           },
           "width": {
             "title": "Width",
@@ -88,7 +88,7 @@
         "output": {
           "out": {
             "title": "Out",
-            "type": "any"
+            "type": "function"
           }
         }
       },
@@ -199,11 +199,11 @@
         "input": {
           "src": {
             "title": "Source",
-            "type": "any"
+            "type": "function"
           },
           "corners": {
             "title": "Destination",
-            "type": "any"
+            "type": "function"
           },
           "count": {
             "title": "Count",
@@ -211,14 +211,14 @@
           },
           "descriptors": {
             "title": "Descriptors",
-            "type": "any",
+            "type": "function",
             "async": true
           }
         },
         "output": {
           "out": {
             "title": "Descriptors",
-            "type": "any"
+            "type": "function"
           }
         }
       },
@@ -241,11 +241,11 @@
         "input": {
           "src": {
             "title": "Source",
-            "type": "any"
+            "type": "function"
           },
           "corners": {
             "title": "Destination",
-            "type": "any"
+            "type": "function"
           },
           "sx": {
             "title": "Sx",
@@ -259,7 +259,7 @@
         "output": {
           "out": {
             "title": "Dest",
-            "type": "any"
+            "type": "function"
           }
         }
       },
@@ -282,11 +282,11 @@
         "input": {
           "src": {
             "title": "Source",
-            "type": "any"
+            "type": "function"
           },
           "dest": {
             "title": "Destination",
-            "type": "any",
+            "type": "function",
             "async": true
           },
           "width": {
@@ -301,7 +301,7 @@
         "output": {
           "out": {
             "title": "Out",
-            "type": "any"
+            "type": "function"
           }
         }
       },
@@ -323,7 +323,7 @@
           },
           "img_u8": {
             "title": "Img U8",
-            "type": "any"
+            "type": "function"
           }
         },
         "output": {
@@ -333,7 +333,7 @@
           },
           "img_u8": {
             "title": "Img U8",
-            "type": "any"
+            "type": "function"
           }
         }
       },

@@ -10,11 +10,11 @@ module.exports = {
     input: {
       src: {
         title: "Source",
-        type: "any"
+        type: "function"
       },
       dest: {
         title: "Destination",
-        type: "any",
+        type: "function",
         async: true,
         fn: function __DEST__(data, source, state, input, $, output, jsfeat) {
           var r = function() {
@@ -42,7 +42,7 @@ module.exports = {
     output: {
       out: {
         title: "Out",
-        type: "any"
+        type: "function"
       }
     }
   },
