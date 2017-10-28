@@ -1,6 +1,7 @@
 on.input.dest  = function() {
   jsfeat.imgproc.grayscale($.src, $.width, $.height, $.dest, $.code)
- 
+
+  // in-place 
   const data_u32 = new Uint32Array($.src.buffer)
   const alpha = (0xff << 24)
   let i = $.dest.cols * $.dest.rows
@@ -12,4 +13,3 @@ on.input.dest  = function() {
   
   output( { out: $.write('dest', $.dest) } );
 };
-

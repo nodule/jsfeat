@@ -32,11 +32,13 @@ module.exports = {
       },
       kernel_size: {
         title: "Kernel Size",
-        type: "number"
+        type: "number",
+        "default": 0
       },
       sigma: {
         title: "Sigma",
-        type: "number"
+        type: "number",
+        "default": 0
       }
     },
     output: {
