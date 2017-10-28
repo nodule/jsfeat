@@ -10,7 +10,7 @@ module.exports = {
     input: {
       src: {
         title: "Source",
-        type: "function"
+        type: "ImageData"
       },
       dest: {
         title: "Destination",
@@ -18,10 +18,11 @@ module.exports = {
         type: "function",
         fn: function __DEST__(data, source, state, input, $, output, jsfeat) {
           var r = function() {
-            jsfeat.imgproc.grayscale($.src, $.width, $.height, $.dest, $.code)
+            jsfeat.imgproc.grayscale($.src.data, $.width, $.height, $.dest, $.code)
 
             output({
-              out: $.write('dest', $.dest)
+              out: $.write('dest', $.dest),
+              imageData: $.write('src', $.src)
             });
           }.call(this);
           return {
@@ -48,6 +49,10 @@ module.exports = {
       out: {
         title: "Out",
         type: "function"
+      },
+      imageData: {
+        title: "Image Data",
+        type: "ImageData"
       }
     }
   },

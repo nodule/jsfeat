@@ -64,7 +64,7 @@
         "input": {
           "src": {
             "title": "Source",
-            "type": "function"
+            "type": "ImageData"
           },
           "dest": {
             "title": "Destination",
@@ -89,6 +89,10 @@
           "out": {
             "title": "Out",
             "type": "function"
+          },
+          "imageData": {
+            "title": "Image Data",
+            "type": "ImageData"
           }
         }
       },
@@ -99,7 +103,7 @@
       "async": true,
       "ns": "jsfeat",
       "name": "grayscale",
-      "fn": "on.input.dest  = function() {\n  jsfeat.imgproc.grayscale($.src, $.width, $.height, $.dest, $.code)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n"
+      "fn": "on.input.dest  = function() {\n  jsfeat.imgproc.grayscale($.src.data, $.width, $.height, $.dest, $.code)\n  \n  output( {\n    out: $.write('dest', $.dest),\n    imageData: $.write('src', $.src)\n  });\n};\n"
     },
     {
       "dependencies": {

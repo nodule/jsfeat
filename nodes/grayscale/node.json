@@ -10,7 +10,7 @@
     "input": {
       "src": {
         "title": "Source",
-        "type": "function"
+        "type": "ImageData"
       },
       "dest": {
         "title": "Destination",
@@ -35,6 +35,10 @@
       "out": {
         "title": "Out",
         "type": "function"
+      },
+      "imageData": {
+        "title": "Image Data",
+        "type": "ImageData"
       }
     }
   },
