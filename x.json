@@ -99,7 +99,7 @@
       "async": true,
       "ns": "jsfeat",
       "name": "grayscale",
-      "fn": "on.input.dest  = function() {\n  jsfeat.imgproc.grayscale($.src, $.width, $.height, $.dest, $.code)\n\n  // in-place \n  const data_u32 = new Uint32Array($.src.buffer)\n  const alpha = (0xff << 24)\n  let i = $.dest.cols * $.dest.rows\n  let pix = 0;\n  while(--i >= 0) {\n    pix = $.dest.data[i]\n    data_u32[i] = alpha | (pix << 16) | (pix << 8) | pix\n  }\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n"
+      "fn": "on.input.dest  = function() {\n  jsfeat.imgproc.grayscale($.src, $.width, $.height, $.dest, $.code)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n"
     },
     {
       "dependencies": {
@@ -313,6 +313,37 @@
       "ns": "jsfeat",
       "name": "resample",
       "fn": "on.input.dest = function() {\n  jsfeat.imgproc.resample($.src, $.dest, $.width, $.height)\n  \n  output( { out: $.write('dest', $.dest) } );\n};\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "in": {
+            "title": "Image Data",
+            "type": "ImageData"
+          },
+          "img_u8": {
+            "title": "Img U8",
+            "type": "any"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Image Data",
+            "type": "ImageData"
+          },
+          "img_u8": {
+            "title": "Img U8",
+            "type": "any"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Converting to U32"
+      },
+      "description": "To U32",
+      "ns": "jsfeat",
+      "name": "u32",
+      "fn": "output = function() {\n  // in-place \n  const data_u32 = new Uint32Array($.in.buffer)\n  const alpha = (0xff << 24)\n  let i = $.img_u8.cols * $.img_u8.rows\n  let pix = 0;\n  while(--i >= 0) {\n    pix = $.img_u8.data[i]\n    data_u32[i] = alpha | (pix << 16) | (pix << 8) | pix\n  }\n\n  cb({\n    out: $.write('in', $.in),\n    img_u8: $.write('img_u8', $.img_u8)\n  });\n  \n  done();\n};\n"
     }
   ]
 }

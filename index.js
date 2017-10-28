@@ -5,5 +5,6 @@ module.exports = {
   matrixT: require('./matrix_t'),
   orbDescribe: require('./orbDescribe'),
   pyrdown: require('./pyrdown'),
-  resample: require('./resample')
+  resample: require('./resample'),
+  u32: require('./u32')
 }

@@ -1,0 +1,30 @@
+{
+  "name": "u32",
+  "ns": "jsfeat",
+  "description": "To U32",
+  "phrases": {
+    "active": "Converting to U32"
+  },
+  "ports": {
+    "input": {
+      "in": {
+        "title": "Image Data",
+        "type": "ImageData"
+      },
+      "img_u8": {
+        "title": "Img U8",
+        "type": "any"
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Image Data",
+        "type": "ImageData"
+      },
+      "img_u8": {
+        "title": "Img U8",
+        "type": "any"
+      }
+    }
+  }
+}
