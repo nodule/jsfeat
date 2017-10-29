@@ -1,6 +1,6 @@
 output = function() {
   // in-place 
-  const data_u32 = new Uint32Array($.in.buffer)
+  const data_u32 = new Uint32Array($.imageData.buffer)
   const alpha = (0xff << 24)
   let i = $.img_u8.cols * $.img_u8.rows
   let pix = 0;
@@ -10,7 +10,7 @@ output = function() {
   }
 
   cb({
-    out: $.write('in', $.in),
+    out: $.write('in', $.imageData),
     img_u8: $.write('img_u8', $.img_u8)
   });
   
