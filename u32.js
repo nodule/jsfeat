@@ -30,7 +30,7 @@ module.exports = {
   fn: function u32(input, $, output, state, done, cb, on) {
     var r = function() {
       // in-place 
-      const data_u32 = new Uint32Array($.imageData.buffer)
+      const data_u32 = new Uint32Array($.imageData.data.buffer)
       const alpha = (0xff << 24)
       let i = $.img_u8.cols * $.img_u8.rows
       let pix = 0;
