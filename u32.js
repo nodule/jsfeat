@@ -40,7 +40,7 @@ module.exports = {
       }
 
       output({
-        out: $.write('imageData', $.imageData),
+        imageData: $.write('imageData', $.imageData),
         img_u8: $.write('img_u8', $.img_u8)
       });
 
