@@ -347,7 +347,7 @@
       "description": "To U32",
       "ns": "jsfeat",
       "name": "u32",
-      "fn": "output = function() {\n  // in-place \n  const data_u32 = new Uint32Array($.imageData.buffer)\n  const alpha = (0xff << 24)\n  let i = $.img_u8.cols * $.img_u8.rows\n  let pix = 0;\n  while(--i >= 0) {\n    pix = $.img_u8.data[i]\n    data_u32[i] = alpha | (pix << 16) | (pix << 8) | pix\n  }\n\n  cb({\n    out: $.write('in', $.imageData),\n    img_u8: $.write('img_u8', $.img_u8)\n  });\n  \n  done();\n};\n"
+      "fn": "output = function() {\n  // in-place \n  const data_u32 = new Uint32Array($.imageData.buffer)\n  const alpha = (0xff << 24)\n  let i = $.img_u8.cols * $.img_u8.rows\n  let pix = 0;\n  while(--i >= 0) {\n    pix = $.img_u8.data[i]\n    data_u32[i] = alpha | (pix << 16) | (pix << 8) | pix\n  }\n\n  cb({\n    out: $.write('imageData', $.imageData),\n    img_u8: $.write('img_u8', $.img_u8)\n  });\n  \n  done();\n};\n"
     }
   ]
 }
